@@ -20,6 +20,7 @@ public class Util {
             throwables.printStackTrace();
         }
     }
+
     public Connection getConnection() {
         return connection;
     }

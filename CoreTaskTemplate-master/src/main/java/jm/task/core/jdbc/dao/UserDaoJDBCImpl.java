@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoJDBCImpl implements UserDao  {
+public class UserDaoJDBCImpl implements UserDao {
     Util util = new Util();
 
     public UserDaoJDBCImpl() {
@@ -28,7 +28,7 @@ public class UserDaoJDBCImpl implements UserDao  {
         try {
             Statement stmt = util.getConnection().createStatement();
             stmt.execute(sql);
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
         }
     }
@@ -50,7 +50,7 @@ public class UserDaoJDBCImpl implements UserDao  {
             Statement statement = util.getConnection().createStatement();
 
             statement.execute(save);
-            System.out.format(" User с именем – %s добавлен в базу данных \n",name);
+            System.out.format(" User с именем – %s добавлен в базу данных \n", name);
         } catch (SQLException e) {
 
         }
