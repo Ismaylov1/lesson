@@ -1,28 +1,26 @@
 package jm.task.core.jdbc;
 
 
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
-import jm.task.core.jdbc.service.UserServiceImpl;
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 
 import java.sql.SQLException;
 
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-        UserDaoJDBCImpl userService = new UserDaoJDBCImpl();
-
-        userService.createUsersTable();
-
-        userService.saveUser("Alex1", "sd", (byte) 18);
-        userService.saveUser("Alex2", "sd", (byte) 18);
-        userService.saveUser("Alex3", "sd", (byte) 18);
-        userService.saveUser("Alex4", "sd", (byte) 18);
-        userService.getAllUsers();
-        userService.removeUserById(2);
-        userService.cleanUsersTable();
-        userService.dropUsersTable();
+        //Hibernate
+        UserDaoHibernateImpl hiber = new UserDaoHibernateImpl();
+        hiber.createUsersTable();
+        hiber.saveUser("sd", "qwe", (byte) 17);
+        hiber.saveUser("sd", "qwe", (byte) 17);
+        hiber.saveUser("sd", "qwe", (byte) 17);
+        hiber.saveUser("sd", "qwe", (byte) 17);
+        hiber.getAllUsers();
 
 
+        hiber.removeUserById(1);
 
+        hiber.cleanUsersTable();
+        hiber.dropUsersTable();
     }
 }
