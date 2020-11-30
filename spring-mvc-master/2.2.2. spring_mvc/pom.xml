@@ -12,9 +12,7 @@
 
     <properties>
         <spring.version>5.2.0.RELEASE</spring.version>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
-
 
     <dependencies>
 
@@ -53,14 +51,6 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <configuration>
-                        <warSourceDirectory>C:\Users\123\IdeaProjects\java mentor\spring-mvc-master\2.2.2. spring_mvc\web</warSourceDirectory>
-                    </configuration>
-                </plugin>
-
             </plugins>
         </pluginManagement>
         <plugins>
@@ -71,11 +61,9 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-
             </plugin>
         </plugins>
         <finalName>Spring_MVC</finalName>
     </build>
-
 
 </project>
