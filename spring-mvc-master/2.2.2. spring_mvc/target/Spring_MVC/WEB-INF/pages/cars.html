@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+
+        .row {
+            font-style: italic;
+        }
+
+        .even-row {
+            color: black;
+        }
+
+        .odd-row {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>Cars</h1>
+
+<table border="1">
+
+    <tr>
+        <th>Car</th>
+        <th>Model</th>
+        <th>Series</th>
+    </tr>
+
+    <tr th:each="car:${cars}">
+        <td th:utext="${car.car}">Car</td>
+        <td th:utext="${car.model}">Model</td>
+        <td th:utext="${car.series}">Series</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
