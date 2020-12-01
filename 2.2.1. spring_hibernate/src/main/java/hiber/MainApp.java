@@ -23,14 +23,19 @@ public class MainApp {
         User user2 = new User("Magamed", "Maga", "google.com");
         user2.setCar(new Car("Bmw", 2));
         userService.add(user2);
+
+        User userCar = userService.getUserHaveCar("Bmw", 2);
+
         List<User> users = userService.listUsers();
         for (User user : users) {
             System.out.println("Id = " + user.getId());
             System.out.println("First Name = " + user.getFirstName());
             System.out.println("Last Name = " + user.getLastName());
             System.out.println("Email = " + user.getEmail());
-            System.out.println("Model Car = " + user.getCar());
-            System.out.println();
+            System.out.println("Car = " + user.getCar().getModel());
+            //
+            System.out.println("Пользователь с автомабилем БМВ "+userCar);
+
         }
 
         context.close();
