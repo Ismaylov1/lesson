@@ -39,4 +39,12 @@ public class Car {
         this.series = series;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "car='" + car + '\'' +
+                ", model='" + model + '\'' +
+                ", series='" + series + '\'' +
+                '}';
+    }
 }
