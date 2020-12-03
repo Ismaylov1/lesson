@@ -1,11 +1,32 @@
 package web.model;
 
-import org.springframework.http.StreamingHttpOutputMessage;
+import javax.persistence.*;
 
+@Entity
+@Table
 public class User {
-    String name;
-    String surname;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     long id;
+
+    @Column
+    String name;
+
+    @Column
+    String surname;
+
+    public User( String name, String surname) {
+        
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public User() {
+        
+    }
+
+   
 
     public long getId() {
         return id;
@@ -29,5 +50,14 @@ public class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 }
