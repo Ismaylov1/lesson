@@ -1,9 +1,9 @@
 package web;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import web.DAO.UserDaoImpl;
 import web.config.RootConfig;
 import web.model.User;
+import web.service.UserService;
 
 public class MainApp {
 
@@ -12,8 +12,8 @@ public class MainApp {
 
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(RootConfig.class);
-        UserDaoImpl userDao = context.getBean(UserDaoImpl.class);
-        User user1 = new User("Senya", "Ismailov");
-        userDao.add(user1);
+        UserService userService = context.getBean(UserService.class);
+        User user = new User("Senya", "Ismailov");
+        userService.add(user);
     }
 }

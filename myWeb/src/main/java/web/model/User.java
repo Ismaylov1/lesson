@@ -2,6 +2,7 @@ package web.model;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table
 public class User {
@@ -16,17 +17,16 @@ public class User {
     @Column
     String surname;
 
-    public User( String name, String surname) {
-        
+    public User(String name, String surname) {
+
         this.name = name;
         this.surname = surname;
     }
 
     public User() {
-        
+
     }
 
-   
 
     public long getId() {
         return id;
@@ -61,3 +61,5 @@ public class User {
                 '}';
     }
 }
+
+

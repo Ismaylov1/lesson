@@ -1,27 +1,29 @@
 package web.DAO;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Repository;
 import web.model.User;
 
+import javax.persistence.TypedQuery;
 import java.util.List;
-@Service
+@Repository
 public class UserDaoImpl implements UserDAO{
     @Autowired
-    UserDAO userDAO;
+    private SessionFactory sessionFactory;
 
-
-    @Transactional
     @Override
     public void add(User user) {
-        userDAO.add(user);
+        sessionFactory.getCurrentSession().save(user);
     }
 
-    @Transactional
     @Override
+    @SuppressWarnings("unchecked")
     public List<User> listUsers() {
-        return userDAO.listUsers();
+        TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery("from User");
+        return query.getResultList();
+
+
     }
 
 }
