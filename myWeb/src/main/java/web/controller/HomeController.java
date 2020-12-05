@@ -4,16 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import web.model.User;
 import web.service.UserService;
 
 @Controller
+@RequestMapping("/users")
 public class HomeController {
-
+    @Autowired
     private UserService userService;
 
     @Autowired(required = true)
@@ -22,18 +20,21 @@ public class HomeController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "index", method = RequestMethod.GET)
-//    public String getIndex(){
-//        return "index";
-//    }
+
+    @GetMapping
     public String listUsers(Model mod) {
         mod.addAttribute("user", new User());
-        mod.addAttribute("listbooks", this.userService.listUsers());
+        mod.addAttribute("listusers", this.userService.listUsers());
 
         return "users";
     }
 
-    @RequestMapping(value = "/users/add", method = RequestMethod.POST)
+    @GetMapping("/add")
+    public String getUserForm() {
+        return "user-form";
+    }
+
+    @PostMapping("/add")
     public String addUsers(@ModelAttribute("user") User user) {
         if (user.getId() == 0) {
             this.userService.add(user);
@@ -43,13 +44,13 @@ public class HomeController {
         return "redirect:/users";
     }
 
-    @RequestMapping("/remove/{id}")
+    @GetMapping("/remove/{id}")
     public String removeUser(@PathVariable("id") long id) {
         this.userService.remove(id);
         return "redirect:/users";
     }
 
-    @RequestMapping("edit/{id}")
+    @GetMapping("edit/{id}")
     public String editBook(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", this.userService.getUserById(id));
         model.addAttribute("listUsers", this.userService.listUsers());

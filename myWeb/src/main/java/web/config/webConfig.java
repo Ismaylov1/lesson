@@ -42,7 +42,7 @@ public class webConfig implements WebMvcConfigurer {
         resolver.setTemplateEngine(templateEngine());
         registry.viewResolver(resolver);
         resolver.setCharacterEncoding("UTF-8");
-        resolver.setContentType("text/html; charset=UTF-8");
+        resolver.setContentType("text/jsp; charset=UTF-8");
     }
 }
 
