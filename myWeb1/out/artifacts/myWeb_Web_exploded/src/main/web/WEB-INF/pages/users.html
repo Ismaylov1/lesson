@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+
+        .row {
+            font-style: italic;
+        }
+
+        .even-row {
+            color: black;
+        }
+
+        .odd-row {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>Users</h1>
+
+<table border="1">
+
+    <tr>
+        <th>id</th>
+        <th>firstname</th>
+        <th>lastname</th>
+    </tr>
+    <tr th:each = user:${Allusers}>
+        <td th:text="${user.getId()}">id</td>
+        <td th:text="${user.firstname}">name</td>
+        <td th:text="${user.lastname}">surname</td>
+        <td>
+            <a href="#" th:href="@{/users/edit/{id} (id=${user.id})}">Edit</a>
+            <a href="#" th:href="@{/users/remove/{id} (id=${user.id})}">Delete</a>
+    </tr>
+</table>
+<br/>
+<a th:href="@{/users/add}">Add</a>
+</div>
+</body>
+</html>
