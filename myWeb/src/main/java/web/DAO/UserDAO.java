@@ -12,9 +12,7 @@ public interface UserDAO {
 
     void remove(long id);
 
-    public User getUserById(long id);
-
-
+    User getUserById(long id);
 
     List<User> listUsers();
 
