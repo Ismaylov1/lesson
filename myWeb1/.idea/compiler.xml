@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="IdeaProjects" />
         <module name="myWeb" />
+        <module name="myWeb1" />
         <module name="myWebApp" />
       </profile>
     </annotationProcessing>

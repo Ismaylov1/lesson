@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/../spring-mvc-master/2.2.2. spring_mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/src/main/web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/../pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../../../../../gitDesktop/lesson/myWeb/pom.xml" />
+        <option value="$USER_HOME$/IdeaProjects/pom.xml" />
       </list>
     </option>
   </component>
