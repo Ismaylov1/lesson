@@ -12,7 +12,7 @@ import java.util.Map;
 @Repository
 public class UserDaoImpl implements UserDao {
     private final Map<String, User> userMap = Collections.singletonMap("test",
-            new User(1L, "test", "test", Collections.singleton(new Role(1L, "ROLE_USER","df")))); // name - уникальное значение, выступает в качестве ключа Map
+            new User(1L, "test", "test","test", Collections.singleton(new Role(1L, "ROLE_USER")))); // name - уникальное значение, выступает в качестве ключа Map
 
     @Override
     public User getUserByName(String name) {
