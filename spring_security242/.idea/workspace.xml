@@ -80,14 +80,14 @@
       <recent name="C:\Users\123\Desktop\security\spring_security242\src\main\java\dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.60">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.0-M10">
     <configuration name="database.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/database.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="696348e8-5149-45e7-af74-77baca203aa0" namespace="schema/&quot;userdb&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 8.5.60" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.60" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.0.0-M10" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.0-M10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="spring-security:war exploded">
@@ -162,7 +162,7 @@
     </configuration>
     <list>
       <item itemvalue="Database Script.database.sql" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.60" />
+      <item itemvalue="Tomcat Server.Tomcat 10.0.0-M10" />
     </list>
     <recent_temporary>
       <list>
@@ -182,6 +182,8 @@
       <workItem from="1607587736964" duration="13215000" />
       <workItem from="1607674457577" duration="12986000" />
       <workItem from="1607711196434" duration="2457000" />
+      <workItem from="1607761060976" duration="1874000" />
+      <workItem from="1607769960798" duration="6026000" />
     </task>
     <servers />
   </component>
@@ -205,16 +207,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="699" y="459" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1607691848292" />
-    <state x="416" y="265" width="1092" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607717640841">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="416" y="262" width="1092" height="752" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607761073578">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="262" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607597127728" />
+    <state x="416" y="262" width="1092" height="752" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607761073578" />
     <state x="416" y="265" width="1092" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1607717640841" />
-    <state x="1245" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1607717857069">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1607770901987">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607693870883" />
+    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607770901987" />
     <state x="1245" y="232" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1607717857069" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607770820584">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607770820584" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607591709840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

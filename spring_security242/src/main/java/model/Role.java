@@ -3,7 +3,6 @@ package model;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
-import javax.print.attribute.standard.MediaSize;
 import java.util.Set;
 
 @Entity
@@ -14,21 +13,32 @@ public class Role implements GrantedAuthority {
     private Long id;
     @Column(name = "name")
     private String role;
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
+    @ManyToMany
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
-    public Set<User> getUsers() {
-        return users;
-    }
 
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
-
-    public Role(Long id, String role, Set<User> users) {
+    public Role(Long id, String role, Set<Role> roles) {
         this.id = id;
         this.role = role;
-        this.users = users;
+        this.roles = roles;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public Role() {
@@ -55,7 +65,7 @@ public class Role implements GrantedAuthority {
         return "Role{" +
                 "id=" + id +
                 ", role='" + role + '\'' +
-                ", users=" + users +
+                ", roles=" + roles +
                 '}';
     }
 }
