@@ -1,4 +1,4 @@
-package service;
+package web.service;
 
 import dao.UserDao;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+
     private final UserDao userDao;
 
     public UserDetailsServiceImpl(UserDao userDao) {
