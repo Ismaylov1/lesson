@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+
+        .row {
+            font-style: italic;
+        }
+
+        .even-row {
+            color: #000000;
+        }
+
+        .odd-row {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <h1>Users</h1>
+    <table border="1">
+
+
+        <tr>
+            <th>id</th>
+            <th>firstname</th>
+            <th>lastname</th>
+        </tr>
+        <tr th:each=user:${allUsers}>
+            <td th:text="${user.getId()}">id</td>
+            <td th:text="${user.name}">name</td>
+            <td th:text="${user.surname}">surname</td>
+
+            <td>
+
+                <a href="#" th:href="@{/users/edit/{id} (id=${user.id})}">Edit</a>
+                <a href="#" th:href="@{/users/delete/{id} (id=${user.id})}">Delete</a>
+            </td>
+            >
+        </tr>
+    </table>
+    <br/>
+    <a th:href="@{/users/add}">Add</a>
+</div>
+</body>
+</html>

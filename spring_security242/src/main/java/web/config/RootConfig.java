@@ -52,7 +52,7 @@ public class RootConfig {
     public LocalContainerEntityManagerFactoryBean getEntityManagerFactoryBean() {
         LocalContainerEntityManagerFactoryBean entityFactory = new LocalContainerEntityManagerFactoryBean();
         entityFactory.setDataSource(getDataSource());
-        entityFactory.setPackagesToScan("web.model");
+        entityFactory.setPackagesToScan("web");
         entityFactory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         entityFactory.setJpaProperties(hibernateProperties());
         return entityFactory;
