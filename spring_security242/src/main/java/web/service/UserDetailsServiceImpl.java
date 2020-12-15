@@ -1,17 +1,17 @@
 package web.service;
 
-import dao.UserDao;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import web.dao.UserDaoImpl;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private final UserDao userDao;
+    private final UserDaoImpl userDao;
 
-    public UserDetailsServiceImpl(UserDao userDao) {
+    public UserDetailsServiceImpl(UserDaoImpl userDao) {
         this.userDao = userDao;
     }
 
