@@ -20,13 +20,13 @@
     <schema id="5" parent="1" name="sakila">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <schema id="6" parent="1" name="sys">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
-    </schema>
-    <schema id="7" parent="1" name="userdb">
+    <schema id="6" parent="1" name="spring_hiber">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="8" parent="1" name="userlist">
+    <schema id="7" parent="1" name="sys">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="userdb">
       <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="9" parent="1" name="world">
@@ -889,7 +889,7 @@
     <collation id="281" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <user id="282" parent="1" name="adminka">
+    <user id="282" parent="1" name="Home">
       <Host>%</Host>
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,RELOAD,SHUTDOWN,PROCESS,FILE,REFERENCES,INDEX,ALTER,SHOW DATABASES,SUPER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,REPLICATION SLAVE,REPLICATION CLIENT,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,CREATE USER,EVENT,TRIGGER,CREATE TABLESPACE!
 </ObjectGrants>
@@ -920,9 +920,9 @@ SELECT|sys.sys_config:null
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,RELOAD,SHUTDOWN,PROCESS,FILE,REFERENCES,INDEX,ALTER,SHOW DATABASES,SUPER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,REPLICATION SLAVE,REPLICATION CLIENT,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,CREATE USER,EVENT,TRIGGER,CREATE TABLESPACE,CREATE ROLE,DROP ROLE!
 </ObjectGrants>
     </user>
-    <table id="287" parent="7" name="roles"/>
-    <table id="288" parent="7" name="user_roles"/>
-    <table id="289" parent="7" name="users"/>
+    <table id="287" parent="8" name="roles"/>
+    <table id="288" parent="8" name="user_roles"/>
+    <table id="289" parent="8" name="users"/>
     <column id="290" parent="287" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
@@ -980,7 +980,7 @@ role_id</ColNames>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="301" parent="289" name="name">
+    <column id="301" parent="289" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
@@ -995,10 +995,19 @@ role_id</ColNames>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="304" parent="289" name="PRIMARY">
+    <index id="304" parent="289" name="users_username_uindex">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="305" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="306" parent="289" name="users_username_uindex">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>users_username_uindex</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

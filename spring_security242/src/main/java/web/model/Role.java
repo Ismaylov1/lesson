@@ -13,10 +13,12 @@ public class Role implements GrantedAuthority {
     private Long id;
     @Column(name = "name")
     private String role;
-    @ManyToMany(mappedBy = "roles")
+
 //    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
 //            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles;
+
+    @ManyToMany(mappedBy = "roles")
+    private Set<User> users;
 
 
     public Role(Long id, String role) {
@@ -33,12 +35,12 @@ public class Role implements GrantedAuthority {
         this.role = role;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Set<User> getUsers() {
+        return users;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 
     public Role() {
@@ -53,19 +55,19 @@ public class Role implements GrantedAuthority {
         this.id = id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", role='" + role + '\'' +
+                ", users=" + users +
+                '}';
+    }
 
     @Override
     public String getAuthority() {
         return role;
     }
 
-    @Override
-    public String toString() {
-        return "Role{" +
-                "id=" + id +
-                ", role='" + role + '\'' +
-                ", roles=" + roles +
-                '}';
-    }
+
 }
