@@ -1,0 +1,8 @@
+
+Q
+java:S1874";Remove this use of "NoOpPasswordEncoder"; it is deprecated.(ñÊÃ­
+M
+java:S1068"7Remove this unused "loginSuccessHandler" private field.(ĞşíÕ
+b
+java:S1192'"GDefine a constant instead of duplicating this literal "/login" 3 times.(—ŞŸşÿÿÿÿ
+V	java:S125I"<This block of commented-out lines of code should be removed.(íìŠøûÿÿÿÿ

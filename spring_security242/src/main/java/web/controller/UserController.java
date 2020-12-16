@@ -14,7 +14,6 @@ public class UserController {
 
 	@GetMapping("/hello")
 	public String printWelcome(ModelMap model) {
-		System.out.println("govno");
 		List<String> messages = new ArrayList<>();
 		messages.add("Hello!");
 		messages.add("I'm Spring MVC-SECURITY application");
